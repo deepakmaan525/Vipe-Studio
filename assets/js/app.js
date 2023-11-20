@@ -23,9 +23,9 @@ navlinks.addEventListener("click", function () {
 
 // back to top //
 let backToTop = document.getElementById('backToTop')
- backToTop.addEventListener("click", function () {
- window.scrollTo(0, 0,{behavior: 'smooth'})
-});
+ function  goToTop(){
+    window.scrollTo(0, 0,{behavior: 'smooth'})
+ } 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 500) {
         backToTop.classList.remove('hidden');
