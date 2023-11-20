@@ -26,7 +26,16 @@
     <!-- Meta Tags Generated with https://metatags.io -->
 </head>
 
-<body>
+<body class="overflow-hidden">
+    <!-- preloader -->
+    <div id="preloader"
+        class="h-screen bg-black flex flex-col gap-4 justify-center items-center fixed top-0 left-0 w-full z-30 ">
+        <img class="w-[177px] h-[63px]" src="./assets/images/page-logo.svg" alt="logo">
+        <div
+            class=" loader w-[50px] h-[50px] relative border-[5px] border-solid border-[#555] border-t-[#f9f9f9] rounded-[50%] animate-spin">
+        </div>
+    </div>
+
     <header class="bg-black overflow-hidden">
         <nav class="lg:py-8 py-4 ">
             <div class="max-w-[1320px] mx-auto px-3">
@@ -865,23 +874,37 @@
                     </div>
                 </div>
                 <div class="flex md:gap-4 gap-3 pt-4 md-pt-0">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/github-icon.svg"
-                        alt="github-icon">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/linkedin-icon.svg"
-                        alt="linkedin-icon">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/twitter-icon.svg"
-                        alt="twitter-icon">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/fb-icon.svg" alt="fb-icon">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/insta-icon.svg"
-                        alt="insta-icon">
-                    <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/worldPress-icon.svg"
-                        alt="wordPress-icon">
+                    <a href="https://github.com/" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/github-icon.svg"
+                            alt="github-icon">
+                    </a>
+                    <a href="https://in.linkedin.com/" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/linkedin-icon.svg"
+                            alt="linkedin-icon">
+                    </a>
+                    <a href="https://twitter.com/i/flow/login" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/twitter-icon.svg"
+                            alt="twitter-icon">
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/fb-icon.svg"
+                            alt="fb-icon">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/insta-icon.svg"
+                            alt="insta-icon">
+                    </a>
+                    <a href="https://wordpress.com/log-in/" target="_blank">
+                        <img class="hover:translate-y-[-8px] duration-500" src="./assets/images/worldPress-icon.svg"
+                            alt="wordpress">
+                    </a>
+
                 </div>
             </div>
         </div>
         <!-- backtotop -->
-        <div onclick="goToTop()" id="backToTop animate-bounce"
-            class="fixed md:bottom-12 md:right-11 right-1 bottom-1 z-[5]">
+        <div onclick="goToTop()" id="backToTop"
+            class="fixed md:bottom-12 md:right-11 right-1 bottom-1 z-[5] hidden animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
                 <rect x="0" y="0" width="100" height="100" rx="10" ry="10" fill="#87CEEB" />
                 <polygon points="50,20 80,70 20,70" fill="#ffffff" />

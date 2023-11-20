@@ -27,7 +27,7 @@ let backToTop = document.getElementById('backToTop')
     window.scrollTo(0, 0,{behavior: 'smooth'})
  } 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 700) {
         backToTop.classList.remove('hidden');
         backToTop.classList.add('flex');
     } else {
@@ -35,3 +35,9 @@ window.addEventListener('scroll', function () {
         backToTop.classList.add('hidden');
     }
 });
+// preloader
+const preloader = document.getElementById("preloader");
+setTimeout(() => {
+    document.getElementById("preloader").classList.add("hidden");
+    document.body.classList.remove("overflow-hidden")
+}, 2000);
