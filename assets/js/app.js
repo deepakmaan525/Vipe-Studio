@@ -20,3 +20,18 @@ navlinks.addEventListener("click", function () {
     span2.classList.toggle("rotate2");
     span3.classList.toggle("rotate3");
 });
+
+// back to top //
+let backToTop = document.getElementById('backToTop')
+ backToTop.addEventListener("click", function () {
+ window.scrollTo(0, 0,{behavior: 'smooth'})
+});
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 500) {
+        backToTop.classList.remove('hidden');
+        backToTop.classList.add('flex');
+    } else {
+        backToTop.classList.remove('flex');
+        backToTop.classList.add('hidden');
+    }
+});
